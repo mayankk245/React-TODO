@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import TODO from "./TODO";
 
 class App extends Component {
   render() {
-    return <p>This is app component</p>;
+    return (
+      <div>
+        <p>mayn</p>
+        <TODO />
+      </div>
+    );
   }
 }
 

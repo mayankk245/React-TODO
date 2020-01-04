@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 
-class ListItem extends Comment {
+class ListItem extends Component {
   render() {
-    return <p>{this.props.listItem}</p>;
+    return <p onClick={this.props.onListItemClick}>{this.props.listItem}</p>;
   }
 }
 export default ListItem;
