@@ -35,25 +35,36 @@ class TODO extends React.Component {
   }
   render() {
     return (
-      <div>
-        <input
-          type="text"
-          id="item"
-          onChange={this.onChangeHandler}
-          value={this.state.tempItem}
-        />
-        <input type="button" onClick={this.addDataHandler} />
-        <p>
-          {this.state.listData.map((data, i) => (
-            <ListItem
-              value={i}
-              listItem={data}
-              onListItemClick={this.deleteDataHandler}
-            >
-              {" "}
-            </ListItem>
-          ))}
-        </p>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <input
+                type="text"
+                id="item"
+                onChange={this.onChangeHandler}
+                value={this.state.tempItem}
+              />
+              <button
+                class="btn waves-effect waves-light"
+                onClick={this.addDataHandler}
+              >
+                ADD
+              </button>
+              <p>
+                {this.state.listData.map((data, i) => (
+                  <ListItem
+                    value={i}
+                    listItem={data}
+                    onListItemClick={this.deleteDataHandler}
+                  >
+                    {" "}
+                  </ListItem>
+                ))}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
